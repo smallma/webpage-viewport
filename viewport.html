@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Viewport detection</title>
+  <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+
+  <style type="text/css">
+    .title, .value {
+      position: relative;
+      vertical-align: top;
+      display: inline-block;
+      font-size: 30px;
+    }
+  </style>
+
+</head>
+<body>
+  <div>
+    <p class="title">Width: </p>
+    <p class="w-v value"></p>
+  </div>
+
+   <div>
+    <p class="title">Height: </p>
+    <p class="h-v value"></p>
+  </div>
+</body>
+
+<script>
+  setTimeout(()=> {
+    $('.w-v').text($(window).width() + 'px');
+    $('.h-v').text($(window).height() + 'px');
+  }, 1000);
+</script>
+</html>
